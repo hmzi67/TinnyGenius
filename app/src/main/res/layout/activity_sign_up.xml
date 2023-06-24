@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="@drawable/bg_g">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="231dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="app logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sfregular"
+        android:text="Welcome To Tinny Genius"
+        android:textColor="@color/white"
+        android:textFontWeight="900"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo" />
+
+    <EditText
+        android:id="@+id/editTextNameAddress"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/input_txt_color"
+        android:textColorHint="@color/input_txt_color"
+        android:background="@drawable/bg_input"
+        android:ems="10"
+        android:fontFamily="@font/sfregular"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_input"
+        android:ems="10"
+        android:fontFamily="@font/sfregular"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/input_txt_color"
+        android:textColorHint="@color/input_txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameAddress" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_input"
+        android:ems="10"
+        android:fontFamily="@font/sfregular"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/input_txt_color"
+        android:textColorHint="@color/input_txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneNumber" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/userPassword"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:textColor="@color/input_txt_color"
+            android:textColorHint="@color/input_txt_color"
+            android:background="@drawable/bg_input"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:fontFamily="@font/sfregular"
+            android:layout_marginEnd="20dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            />
+
+        <EditText
+            android:id="@+id/userPasswordConfirm"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:textColor="@color/input_txt_color"
+            android:textColorHint="@color/input_txt_color"
+            android:background="@drawable/bg_input"
+            android:hint="Confirm "
+            android:inputType="textPassword"
+            android:fontFamily="@font/sfregular"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/gender_layout"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="60dp"
+            android:fontFamily="@font/sfregular"
+            android:gravity="center"
+            android:text="Gender"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/genderMF">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/sfregular"
+                android:text="Male"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/sfregular"
+                android:text="Female"
+                android:textColor="@color/white" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/buttonSU"
+        android:layout_width="322dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_primary"
+        android:fontFamily="@font/sfregular"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@color/btn_color"
+        app:backgroundTint="@color/primary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender_layout" />
+
+    <TextView
+        android:id="@+id/already_account_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sfregular"
+        android:text="@string/alreadyAccountText"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSU" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
